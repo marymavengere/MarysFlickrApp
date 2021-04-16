@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="card bg-light mb-3" >
+        <div class="card-header"><h2>Mary's Flickr App</h2> </div>
+        <div class="card-body">
+          <h5 class="card-title">Search places</h5>
+          <div class="form-group">
+            <input type="search" class="form-control" (keyup)="search($event)" placeholder="Search places">
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 p-3" *ngFor="let image of images">
+              <div class="card">
+                <a href="{{image.url}}_b.jpg">
+                  <img src="{{image.url}}_m.jpg" title="{{image.title}}">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>
